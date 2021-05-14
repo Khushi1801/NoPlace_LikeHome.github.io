@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE+EDGE"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>SignIN</title>
+	<link rel="stylesheet" type="text/css" href="SignIn.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="forms-container">
+			<div class="signin">
+				<div class="box">
+				<form action="#" class="signin-form">
+					<h2 class="title">Sign IN</h2>
+					<div class="input-field">
+						<i class="fa fa-user" aria-hidden="true"></i>
+						<input type="text" placeholder="Username" name="" required="required" />
+					</div>
+					<div class="input-field">
+						<i class="fa fa-lock" aria-hidden="true"></i>
+						<input type="password" placeholder="Password" name="" required="required" id="typepass"/>
+						<input type="checkbox" class="btn1 solid" onclick="Toggle()">
+						
+					</div>
+					<br><br><br><input type="submit" class="btn solid" value="Sign_IN" />
+					<p class="social-text"> Or Sign IN with social platform</p>
+					<div class="social-media">
+						<a href="#" class="social-icon">
+							<i class="fa fa-google" aria-hidden="true"></i>
+						</a>     
+						<a href="#" class="social-icon">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</a>     
+						<a href="#" class="social-icon">
+							<i class="fa fa-instagram" aria-hidden="true"></i>
+						</a>      
+						<a href="#" class="social-icon">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+			</div>
+		</div>
+		<div class="panels-container"></div>
+	</div>
+
+	<script>
+    
+        function Toggle() {
+            var temp = document.getElementById("typepass");
+            if (temp.type === "password") {
+                temp.type = "text";
+            }
+            else {
+                temp.type = "password";
+            }
+        }
+</script>
+</body>
+</html>

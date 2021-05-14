@@ -1,0 +1,240 @@
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+
+.contact{
+	position: relative;
+	min-height: 100vh;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: url(HomeDecor7.jpg);
+	background-size: cover;
+}
+
+.contact .content{
+	max-width: 800px;
+	text-align: center;
+}
+
+.contact .content h2{
+	font-size: 36px;
+	font-weight: 500;
+	color: navy;
+	text-decoration: underline overline;
+}
+
+.contact .content p{
+	font-weight: 400;
+	font-size: 23px;
+	color: black;
+}
+
+.container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.container .contactinfo{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: right;
+}
+
+.container .contactinfo .box{
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+	margin-left: 200px;
+	animation: slide_left 0.7s linear forwards;
+	animation-delay: calc(0.3s * var(--j));
+}
+
+@keyframes slide_left{
+	0%{
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+.container .contactinfo .box .icon{
+	min-width: 60px;
+	height: 60px;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
+}
+
+.container .contactinfo .box .icon:hover{
+	color: lightskyblue;
+	background-color: midnightblue;
+}
+
+.container .contactinfo .box .text{
+	display: flex;
+	margin-left: 20px;
+	font-size: 16px;
+	color: white;
+	flex-direction: column;
+	font-weight: 300;
+	color: black;
+}
+
+.container .contactinfo .box .text h3{
+	font-weight: 550;
+	color: navy;
+	text-decoration: underline;
+}
+
+.container .contactinfo .box .text h3:hover{
+	color: lightskyblue;
+}
+
+.container .contactinfo .box .text p{
+	font-weight: 500;
+	font-size: 17px;
+}
+
+.contactform{
+	width: 100%;
+	padding: 40px;
+	background: white;
+
+}
+
+.contactform h2{
+	font-size: 30px;
+	color: purple;
+	font-weight: 500;
+}
+
+
+.contactform .inputBox{
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.contactform .inputBox input{
+	width: 100%;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	border:none;
+	border-bottom: 2px solid black;
+	outline: none;
+	resize: none;
+}
+.contactform .inputBox textarea{
+	width: 100%;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	border:none;
+	border-bottom: 2px solid black;
+	outline: none;
+	resize: none;
+}
+
+.contactform .inputBox span{
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	pointer-events: none;
+	transition: 0.5s;
+}
+
+.contactform .inputBox input:focus ~ span,
+.contactform .inputBox input:valid ~ span,
+.contactform .inputBox textarea:focus ~ span,
+.contactform .inputBox textarea:valid ~ span{
+	color: red;
+	font-size: 12px;
+	transform: translateY(-20px);
+
+}
+
+.contactform .inputBox input[type="submit"]{
+	width: 100px;
+	background: #00bcd4;
+	color: white;
+	border:none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 18px;
+
+}
+
+@media (max-width: 991px;)
+{
+	.contact{
+		padding: 50px;
+	}
+	.container{
+		flex-direction: column;
+	}
+	.container .contactinfo{
+		margin-bottom: 40px;
+	}
+	.container .contactinfo,
+	.contactform{
+		width: 100%;
+	}
+}
+
+.content h2{
+	
+	font-size: 40px;
+	opacity: 0;
+	animation: slide_top 0.7s linear forwards;
+	animation-delay: calc(0.3s * var(--j));
+}
+
+@keyframes slide_top{
+	0%{
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+.content p{
+	
+	font-size: 40px;
+	opacity: 0;
+	animation: slide_left 0.7s linear forwards;
+	animation-delay: calc(0.3s * var(--j));
+}
+
+@keyframes slide_left{
+	0%{
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+

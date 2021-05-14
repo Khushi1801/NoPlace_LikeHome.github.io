@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<title>Home Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="Index.css">
+</head>
+<body onload="slider()">
+	<div class="banner">
+		<div class="slider">
+			<img src="HomeDecor1.jpg" id="slideig">
+		</div>
+	</div>
+
+	<div class="overlay">
+
+	<header id="header">
+		<div class="dropdown">	
+		<a href="#" class="logo">NO PLACE LIKE HOME</a>
+		
+
+		<br><br><br>
+		<ul>
+			<li><a href="Homepage.html" class="active" style="--i:1;">HOME</a></li>
+			<li><a href="Categories.html" style="--i:2;">CATEGORIES  <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+				<div class="sub-menu">
+				<ul>
+					<li><a href="sofas.html">Sofa</a></li>
+					<li><a href="beds.html">Beds</a></li>
+					<li><a href="kitchen.html">Kitchen</a></li>
+					<li><a href="chairs.html">Chairs</a></li>
+					<li><a href="tables.html">Tables</a></li>
+				</ul>
+			</div>
+			</li>
+			<li><a href="aboutus.html" style="--i:3;">ABOUT US</a></li>
+			<li><a href="contact_us.html" style="--i:4;">CONTACT US</a></li>
+			<li><a href="SignIn.html" style="--i:5;">SignIn</a></li>
+
+	 	</ul>
+	    </div>
+	</header><br>
+	<br><br><br><br><br><br><br>
+	<div class="content">
+		<h2 style="--j:1;">...It's time to decor our HOME...</h2>
+		<h3 style="--j:2;">...Furnitures for you...</h3>
+
+</div>
+
+<div>
+	<button type="button" class="btn1">FACEBOOK          <i class="fa fa-facebook" aria-hidden="true"></i></button>
+	<button type="button" class="btn2">LINKEDINN         <i class="fa fa-linkedin" aria-hidden="true"></i></button>
+	<button type="button" class="btn3">INSTAGRAM         <i class="fa fa-instagram" aria-hidden="true"></i></button>
+	<button type="button" class="btn4">TWITTER           <i class="fa fa-twitter" aria-hidden="true"></i></button>
+</div>
+</div>
+
+
+<script>
+	var slideig = document.getElementById("slideig");
+
+	var images = new Array(
+        "HomeDecor1.jpg",
+        "HomeDecor2.jpg",
+        "HomeDecor3.jpg",
+        "HomeDecor4.jpg",
+        "HomeDecor5.jpg",
+        "HomeDecor6.jpg",
+        "HomeDecor7.jpg",
+        "HomeDecor8.jpg",
+        "HomeDecor9.jpg",
+        "HomeDecor10.jpg"
+
+		);
+
+	var len = images.length;
+	var i = 0;
+
+	function slider(){
+		if(i>len-1){i=0;}
+		slideig.src = images[i];
+		i++;
+		setTimeout('slider()',2000);
+	}
+</script>
+
+
+
+
+
+</body>
+</html>
